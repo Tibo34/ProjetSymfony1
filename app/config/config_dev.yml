@@ -37,8 +37,5 @@ monolog:
         #    type: chromephp
         #    level: info
 
-swiftmailer:
-    transport: '%mailer_transport%'       
-    username: '%mailer_user%'
-    password: '%mailer_password%'
-#    delivery_addresses: ['me@example.com']
+swiftmailer:    
+   delivery_address: molinathibaut34@gmail.com

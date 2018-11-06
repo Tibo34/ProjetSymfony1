@@ -19,6 +19,13 @@ else{
     $mess="";
 }
 
+if(isset($mail)){
+    $adress=array_keys($mail)[0];
+}
+else{
+    $adress="";
+}
+
 ?>
 <!doctype html>
     <html>
@@ -42,8 +49,9 @@ else{
         </form>
 
         <div>
-        <p><?= $text ?></p>
-        <p><?= $mess ?> </p>
+        <p><?= var_dump($text) ?></p>
+        <p><?= var_dump($mess) ?> </p>
+        <p> <?= var_dump($adress) ?> </p>
        
         </div>
         </body>

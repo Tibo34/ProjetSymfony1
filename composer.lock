@@ -4,8 +4,56 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c44d346d773fb17a99ebcd1518dee2fa",
+    "content-hash": "57bd482acdeeb7270ae7901890bb7da3",
     "packages": [
+        {
+            "name": "artgris/maintenance-bundle",
+            "version": "1.0.7",
+            "target-dir": "Artgris/MaintenanceBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/artgris/MaintenanceBundle.git",
+                "reference": "d8a2b9a14a8f96697805a93e680bb54d418634d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/artgris/MaintenanceBundle/zipball/d8a2b9a14a8f96697805a93e680bb54d418634d7",
+                "reference": "d8a2b9a14a8f96697805a93e680bb54d418634d7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/framework-bundle": "^2.3 || ^3.0",
+                "twig/twig": "~1.11|~2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "Artgris\\MaintenanceBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arthur Gribet",
+                    "email": "a.gribet@gmail.com"
+                }
+            ],
+            "description": "Symfony Bundle to place your Symfony website in maintenance mode",
+            "homepage": "https://github.com/artgris/MaintenanceBundle",
+            "keywords": [
+                "bundle",
+                "maintenance",
+                "symfony"
+            ],
+            "time": "2017-09-19T15:52:29+00:00"
+        },
         {
             "name": "composer/ca-bundle",
             "version": "1.1.2",
@@ -2450,8 +2498,5 @@
     "platform": {
         "php": ">=5.5.9"
     },
-    "platform-dev": [],
-    "platform-overrides": {
-        "php": "5.6"
-    }
+    "platform-dev": []
 }

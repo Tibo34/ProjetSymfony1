@@ -16,16 +16,19 @@ class ContactController extends Controller
      */
     public function contactpostAction(){
         $request=Request::createFromGlobals();
+        $objet='TML';
+        if('dev'===$this->get('kernel')->getEnvironment())
+        {
+            $objet.=' dev ';
+        }
         $message=$request->get('identite')." : ".$request->request->get('message');
         $mail=\Swift_Message::newInstance()
-        ->setSubject('PAG')
-        ->setFrom('molinathibaut34@gamail.com')
-        ->setTo('thibaut.molina@vivelys.com')
-        ->setCc('thibaut.molina@etu.umontpellier.fr')
-        ->setCc('thibautmolina@yahoo.fr')
+        ->setSubject($objet)
+        ->setFrom('thibautmolina@yahoo.fr')
+        ->setTo('thibaut.molina@vivelys')       
         ->setBody($message);
         $retour=$this->get('mailer')->send($mail);
-        return $this->render('contact/contact.html.php',array('confirmation'=>$retour,'message'=>$message));
+        return $this->render('contact/contact.html.php',array('confirmation'=>$retour,'message'=>$message,"mail"=>$mail->getTo()));
     }
 
     /**
