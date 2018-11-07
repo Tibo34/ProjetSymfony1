@@ -1,3 +1,19 @@
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
+homePage:
+    path:  /
+    defaults: { _controller: AppBundle:Controller:AccueilController }
+
+conditionPage:
+    path: /conditions
+    defaults: { _controller: AppBundle:Controller:ConditionController }
+
+contactPage:
+    path: /contact
+    defaults: { _controller: AppBundle:Controller:ContactController }
+
+AnnoncePage:
+    path: /Annonces
+    defaults: { _controller: AppBundle:Controller:ContactController }

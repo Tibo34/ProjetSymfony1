@@ -8,10 +8,11 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+        {% include "menu.html.twig" %}
         {% block titlehead %} Title {% endblock %}
         {% block body %}body{% endblock %}
         {% block footer %}<footer>Copyright TML - Tous droit réservés</footer>{% endblock %}
-        {% block javascripts %}{% endblock %}        
+        {% block javascripts %}<script type="text/javascript" src="{{asset('js/script.js')}}"></script>{% endblock %}        
         
       
     </body>

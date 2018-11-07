@@ -1,0 +1,28 @@
+{# app/Ressources/view/annonce/annonce.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}TML/Annonces{% endblock %}
+
+{% block titlehead %}
+<h1>Annonces</h1> 
+{% endblock %}
+
+{% block body %}
+<div class='tabAnnonce'>
+<table class='annonce'>
+        <tr>
+            {% for key in keys %}
+                <th>{{key}}</th>
+            {% endfor %}
+        </tr>
+   {% for annonce in annonces %}
+   <tr>        
+      <td>{{annonce.id}}</td>
+      <td>{{annonce.title}}</td>
+      <td>{{annonce.description}}</td>
+      <td style="color:{{annonce.prix|prix}}">{{annonce.prix}}</td>
+    </tr>
+   {% endfor %}
+ </table> 
+</div>
+ {% endblock %}
