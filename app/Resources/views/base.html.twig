@@ -1,13 +1,18 @@
+{# app/Ressources/view/base.html.twig #}
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}<link rel="stylesheet" type="text/css" href="{{asset('css/styles.css')}}">{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block titlehead %} Title {% endblock %}
+        {% block body %}body{% endblock %}
+        {% block footer %}<footer>Copyright TML - Tous droit réservés</footer>{% endblock %}
+        {% block javascripts %}{% endblock %}        
+        
+      
     </body>
 </html>

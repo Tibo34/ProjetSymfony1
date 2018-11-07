@@ -16,7 +16,7 @@ class ConditionController extends Controller
      */
     public function conditionsAction(Request $name)
     {
-        return $this->render('conditions/conditions.html.php', [
+        return $this->render('conditions/conditions.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
     }

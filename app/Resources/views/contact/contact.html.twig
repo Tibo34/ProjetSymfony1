@@ -1,0 +1,42 @@
+
+{# app/Ressources/view/accueil/accueil.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}TML/Contact{% endblock %}
+
+{% block titlehead %}
+<h1>Contact</h1> 
+{% endblock %}
+
+{% block stylesheets %}{{ parent() }}
+<link rel="stylesheet" type="text/css" href="{{asset('css/contact.css')}}">
+{% endblock %}
+
+{% block body %}
+<form action="contact" method="post">
+        <div>
+            <label for="identite"> Nom  :</label>
+            <input type="text" id="identite" name="identite" size ="40">
+        </div> 
+        <div>
+            <label for="message">Message  :</label>
+            <textarea type="text" id="message" name="message" rows="4" cols="40"></textarea>
+        </div> 
+        <div class="button">
+            <button type="submit">Envoyer le message</button>
+        </div>           
+    </form>
+
+    <div>
+    {% if confirmation is defined and confirmation == 1 %}
+    <p>{{confirmation}}</p>
+    {% endif %}
+    {% if message is defined %}
+    <p>{{message}}</p>
+    {% endif %}
+    {% if mail is defined  %}
+    <p> {{mail}} </p>
+    {% endif %}
+   
+    </div>
+{% endblock %}

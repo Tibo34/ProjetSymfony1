@@ -13,7 +13,8 @@ class AccueilController extends Controller
      */
     public function accueilAction(Request $name)
     {
-        return $this->render('accueil/accueil.html.php', [
+        //
+        return $this->render('accueil/accueil.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
     }

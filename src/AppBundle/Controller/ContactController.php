@@ -28,7 +28,8 @@ class ContactController extends Controller
         ->setTo('thibaut.molina@vivelys')       
         ->setBody($message);
         $retour=$this->get('mailer')->send($mail);
-        return $this->render('contact/contact.html.php',array('confirmation'=>$retour,'message'=>$message,"mail"=>$mail->getTo()));
+        return $this->render('contact/contact.html.twig',
+        array('confirmation'=>$retour,'message'=>$message,"mail"=>array_keys($mail->getTo())[0]));
     }
 
     /**
@@ -36,7 +37,7 @@ class ContactController extends Controller
      */
     public function contactAction(Request $name)
     {
-         return $this->render('contact/contact.html.php', [
+         return $this->render('contact/contact.html.twig', [
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
     }
