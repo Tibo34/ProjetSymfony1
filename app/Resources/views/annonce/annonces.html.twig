@@ -1,0 +1,30 @@
+{# app/Ressources/view/annonce/annonce.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}{{parent()}}/Annonces{% endblock %}
+
+{% block titlehead %}
+<h1>Annonces</h1> 
+{% endblock %}
+
+{% block body %}
+<div class='Annonces'>
+<table>
+        <tr>
+            {% for key in keys %}
+                <th>{{key}}</th>
+            {% endfor %}
+        </tr>
+   {% for annonce in annonces %}   
+   <tr>        
+      <td><a href="{{path('AnnoncePage')}}/{{annonce.id}}">{{annonce.id}}</a></td>
+      <td>{{annonce.nom}}</td>
+      <td>{{annonce.description}}</td>
+      <td style="color:{{annonce.prix|prix}}">{{annonce.prix}}</td>
+      <td>{{annonce.mail}}</td>
+      <td>{{annonce.departement}}</td>
+    </tr>
+   {% endfor %}
+ </table> 
+</div>
+ {% endblock %}

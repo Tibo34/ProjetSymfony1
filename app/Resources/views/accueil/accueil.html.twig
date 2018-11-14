@@ -1,7 +1,7 @@
 {# app/Ressources/view/accueil/accueil.html.twig #}
 {% extends 'base.html.twig' %}
 
-{% block title %}TML/Accueil{% endblock %}
+{% block title %}{{ parent() }}/Accueil{% endblock %}
 
 {% block titlehead %}
 <h1>Accueil</h1> 
@@ -10,6 +10,6 @@
 {% block body %}
 <p style="font-size:50px;color:red;">Le site est en cours de construction</p>
 
-<p>{{chaine1|concat(chaine2)}}</p>
+<p>{{chaine1~chaine2}}</p>
 
 {% endblock %}

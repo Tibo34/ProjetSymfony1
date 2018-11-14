@@ -17,3 +17,8 @@ contactPage:
 AnnoncePage:
     path: /Annonces
     defaults: { _controller: AppBundle:Controller:ContactController }
+
+AjoutPage:
+    path: /ajouter
+    defaults: { _controller: AppBundle:Controller:ContactController }
+

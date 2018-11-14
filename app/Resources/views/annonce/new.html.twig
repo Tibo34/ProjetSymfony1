@@ -1,0 +1,14 @@
+{#app/Ressources/views/annonce/new.html.twig#}
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }}/Ajouter{% endblock %}
+
+{% block titlehead %}
+<h1>Annonces/ajout</h1> 
+{% endblock %}
+
+{% block body %}
+{{form_start(form)}}
+{{form_widget(form)}}
+{{form_end(form)}}
+{% endblock %}
