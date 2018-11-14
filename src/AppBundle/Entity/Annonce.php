@@ -66,11 +66,8 @@ class Annonce
     /**
      * @var int
      * 
-     * @ORM\ManyToOne(targetEntity="Departement",inersedBy="id")
-     * @ORM\JoinColumn(name="departement_id",type="integer",length=100)
-     * @Assert\Length(
-     *          maxMessage="le champ département est trop grand",
-     *          max=100)     
+     * @ORM\ManyToOne(targetEntity="Departement",inversedBy="id")
+     * @ORM\JoinColumn(name="departement_id",referencedColumnName="id")
      */
     private $departement;
 

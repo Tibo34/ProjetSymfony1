@@ -1,12 +1,16 @@
 {# app/Ressources/view/menu.html.twig #}
-    <div class="nav" id="menu">      
-        <ul>
-            <li><a href="{{path('homePage')}}"> Accueil</a> </li>
-            <li><a href="{{path('AnnoncePage')}}">Annonces</a></li>
-            <li><a href="{{path('conditionPage')}}"> Conditions</a> </li> 
-            <li><a href="{{path('AjoutPage')}}">Ajouter</a></li>   
-            <li><a href="{{path('contactPage')}}"> Contact </a></li>
-        </ul>
+    <div class="nav" id="menu">
+            <a href="{{path('homePage')}}"> Accueil</a>
+            <a href="{{path('AnnoncePage')}}">Annonces</a>
+            <a href="{{path('conditionPage')}}"> Conditions</a>
+            <a href="{{path('AjoutPage')}}">Ajouter</a>
+            <a href="{{path('contactPage')}}"> Contact </a>                  
+           
+             <div class="image"> 
+                <img  src="{{asset('logo.jpg') }}" alt="logo"/>
+             </div>
+                    
+        
     </div>
 
 

@@ -7,7 +7,8 @@ class AnnonceExtension extends \Twig_Extension{
 
     public function getFilters()
     {
-        return array(new \Twig_SimpleFilter('prix',array($this,'prixFilter')));
+        return array(new \Twig_SimpleFilter('prix',array($this,'prixFilter')),
+            new \Twig_SimpleFilter('franc',array($this,'prixFranc')));
     }
 
     public function prixFilter($prix){
@@ -17,6 +18,10 @@ class AnnonceExtension extends \Twig_Extension{
         else{
             return 'blue';
         }
+    }
+
+    public function prixFranc($prix){
+        return $prix*6.56;
     }
 
     public function getName()

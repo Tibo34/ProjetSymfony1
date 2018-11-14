@@ -8,12 +8,18 @@
 {% endblock %}
 
 {% block body %}
+<div class="nbAnnonces">
+    <p>
+        Nombre d'annonces : {{nbAnnonce}}
+    </p>
+</div>
 <div class='Annonces'>
 <table>
         <tr>
             {% for key in keys %}
                 <th>{{key}}</th>
             {% endfor %}
+            
         </tr>
    {% for annonce in annonces %}   
    <tr>        
@@ -21,6 +27,7 @@
       <td>{{annonce.nom}}</td>
       <td>{{annonce.description}}</td>
       <td style="color:{{annonce.prix|prix}}">{{annonce.prix}}</td>
+      <td>{{annonce.prix|franc}}</td>
       <td>{{annonce.mail}}</td>
       <td>{{annonce.departement}}</td>
     </tr>

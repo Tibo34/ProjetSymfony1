@@ -2,6 +2,8 @@
 
 namespace AppBundle\Repository;
 
+use Doctrine\ORM\EntityRepository;
+
 /**
  * AnnonceRepository
  *
@@ -11,5 +13,23 @@ namespace AppBundle\Repository;
 class AnnonceRepository extends \Doctrine\ORM\EntityRepository
 {
 
-   
+    public function getNbAnnonces(){
+       
+        $nb=$this->createQueryBuilder('a')
+        ->select('COUNT(a)')
+        ->getQuery()
+        ->getSingleScalarResult();
+        return $nb;
+    }
+
+    public function RandomAnnonce(){
+        $max=$this->createQueryBuilder('m')
+        ->select('MAX(m.id)')
+        ->getQuery()
+        ->getSingleScalarResult();       
+        $idAnnonce=rand(1,$max);  
+        $annonce=$this->find($idAnnonce);       
+        return $annonce;
+    }
+
 }

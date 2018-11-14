@@ -13,7 +13,7 @@ footer{
     font-family: "Times New Roman", Times, serif;
 }
 
-.nav ul {
+.nav div{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -21,20 +21,22 @@ footer{
     background-color: #333;
 }
 
-.nav li {
-    float: left;
+.nav {
+    background-color: #333;
+    overflow: hidden;
 }
 
-.nav li a {
-    display: block;
-    color: white;
+.nav a {
+    float: left;
+    color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: 17px;
 }
 
 /* Change the link color to #111 (black) on hover */
-.nav li a:hover {
+.nav  a:hover {
     background-color: #111;
 }
 
@@ -59,3 +61,20 @@ table, th, td {
     margin:auto;
 }
 
+
+.image{   
+    margin:10px;   
+    float: right;
+}
+
+img{
+    margin:10px;
+}
+
+.nbAnnonces{
+    width: 300px;
+    border: 5px solid blue;
+    padding: 25px;
+    margin: 25px;
+    float: right;
+}

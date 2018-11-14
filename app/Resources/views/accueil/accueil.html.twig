@@ -4,12 +4,26 @@
 {% block title %}{{ parent() }}/Accueil{% endblock %}
 
 {% block titlehead %}
-<h1>Accueil</h1> 
+<h1>Accueil</h1>
+<h2>{% for message in app.flashes('operation') %}
+    {{message}}
+    {% endfor %}</h2> 
 {% endblock %}
 
 {% block body %}
-<p style="font-size:50px;color:red;">Le site est en cours de construction</p>
+<div>
+        <ul>
+             
+              <li>id: {{annonce.id}}</li>
+              <li>nom: {{annonce.nom}}</td>
+              <li>description: {{annonce.description}}</li>
+              <li style="color:{{annonce.prix|prix}}">prix: {{annonce.prix}}</li>
+              <li>mail : {{annonce.mail}}</li>
+              <li>département : {{annonce.departement}}</li>    
+          
+         </ul> 
+        </div>
 
-<p>{{chaine1~chaine2}}</p>
+
 
 {% endblock %}
